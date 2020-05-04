@@ -15,7 +15,7 @@ class CoffeeDetail extends Component {
       <div className= "coffee-details">
 
        <div className= "coffee-details-img-container">
-        <img className= "coffee-details-img" src{this.props.coffee.imgLink} alt="image"/>
+        <img className= "coffee-details-img" src={this.props.coffee.imgLink} alt="image"/>
         </div>
 
         <div className= "coffee-box-details">
