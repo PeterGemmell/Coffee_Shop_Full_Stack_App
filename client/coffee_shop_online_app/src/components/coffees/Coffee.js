@@ -14,12 +14,13 @@ const Coffee = (props) => {
     <div className="coffee-component">
     <img src={props.coffee.imgLink} width="280" />
     <div>
-    <p><b>{props.coffee.brandName}</b></p><br></br>
+    <p><b><u>{props.coffee.brandName}</u></b></p><br></br>
     <p><i>Name</i>  {props.coffee.productName}</p>
     <p><i>Origin</i>  {props.coffee.origin}</p>
     <p><i>Beans</i>  {props.coffee.typeOfBeans}</p>
     <p>{props.coffee.productInfo}</p>
     <p>£{props.coffee.retailPrice}</p>
+    <button>Add To Basket</button>
     </div>
     </div>
     </Fragment>

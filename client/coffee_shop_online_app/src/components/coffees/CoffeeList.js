@@ -11,6 +11,7 @@ const CoffeeList = (props) => {
     return (
       <li key={index} className="component-item">
       <div className="component">
+      <br></br>
       <Coffee coffee={coffee} />
       </div>
       </li>

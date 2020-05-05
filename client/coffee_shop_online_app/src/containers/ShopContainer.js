@@ -13,8 +13,7 @@ const ShopContainer = () => {
     <Switch>
     <Route path="/coffees" component={CoffeeContainer} />
     <Route path="/login" component={LoginContainer} />
-    </Switch>
-    
+    </Switch>    
     </Fragment>
     </Router>
    )
