@@ -24,6 +24,7 @@ class CoffeeDetail extends Component {
           <h1> {this.props.coffee.productName} </h1>
           <h1> {this.props.coffee.origin} </h1>
           <h2> {this.props.coffee.typeOfBeans} </h2>
+          <h3> {this.props.coffee.productInfo} </h3>
           <h2> £{this.props.coffee.retailPrice} </h2>
       </div>
 

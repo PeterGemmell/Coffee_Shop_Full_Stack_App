@@ -11,15 +11,14 @@ const Coffee = (props) => {
 
   return (
     <Fragment>
-    <Link to ={url} className="name">
     <img src={props.coffee.imgLink} width="200" />
     <br></br>
-    {props.coffee.brandName}
-    {props.coffee.productName}
-    {props.coffee.origin}
-    {props.coffee.typeOfBeans}
+    <p> {props.coffee.brandName}</p>
+    <p>{props.coffee.productName}</p>
+    <p>{props.coffee.origin}</p>
+    <p>{props.coffee.typeOfBeans}</p>
+    <p>{props.coffee.productInfo}</p>
     <p>£{props.coffee.retailPrice}</p>
-    </Link>
     </Fragment>
   )
 }
