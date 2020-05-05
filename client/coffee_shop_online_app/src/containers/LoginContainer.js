@@ -19,7 +19,7 @@ class LoginContainer extends Component {
     })
   }
 
-  handlePost(user){
+  handlePost(customer){
     const request = new Request();
     request.post('/api/customers', customer)
     .then( () => {
