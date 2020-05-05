@@ -11,14 +11,17 @@ const Coffee = (props) => {
 
   return (
     <Fragment>
-    <img src={props.coffee.imgLink} width="200" />
-    <br></br>
-    <p> {props.coffee.brandName}</p>
-    <p>{props.coffee.productName}</p>
-    <p>{props.coffee.origin}</p>
-    <p>{props.coffee.typeOfBeans}</p>
+    <div className="coffee-component">
+    <img src={props.coffee.imgLink} width="280" />
+    <div>
+    <p><b>{props.coffee.brandName}</b></p><br></br>
+    <p><i>Name</i>  {props.coffee.productName}</p>
+    <p><i>Origin</i>  {props.coffee.origin}</p>
+    <p><i>Beans</i>  {props.coffee.typeOfBeans}</p>
     <p>{props.coffee.productInfo}</p>
     <p>£{props.coffee.retailPrice}</p>
+    </div>
+    </div>
     </Fragment>
   )
 }

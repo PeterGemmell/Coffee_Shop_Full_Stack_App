@@ -6,16 +6,15 @@ const NavBar = (props) => {
   return (
     <div>
     <header>
-    <h1 className="h1-header">Coffee Ahoy</h1>
+    <h1 className="h1-header">COFFEE AHOY</h1>
 
-    <ul className="ul-links-bar">
+
     <li className="navLink">
     <a href="/coffees">Coffee's</a>
     </li>
     <li className="navLink">
     <a href="/login">Logout</a>
     </li>
-    </ul>
     </header>
     </div>
 

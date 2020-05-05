@@ -33,7 +33,7 @@ class LoginForm extends Component {
 
   render(){
     return(
-      <div>
+      <div className="new-customer-form">
       <br></br><br></br><br></br><br></br>
       <p> Welcome to Coffee Ahoy, create an account below and start shopping your favourite coffees!</p><br></br><br></br>
       <h1> Create an account </h1>

@@ -1,3 +1,52 @@
+
+.h1-header {
+justify-content: center;
+color: #34495e;
+padding-left: 540px;
+margin: 0;
+height: 100%;
+width: 25%;
+font-style: italic;
+text-align: center;
+line-height: 80px;
+
+align-items: center;
+}
+
+.ul-links-bar{
+  width: 100%;
+  line-height: 80px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+
+
+}
+
+.navLink {
+    flex-direction: row;
+    display: flex;
+    justify-content:center;
+    flex-direction: row-reverse;
+
+
+
+}
+
+.coffee-component {
+  display: inline-flex;
+  justify-content: center;
+  padding-right: 400px;
+  justify-content: space-between;
+}
+
+.new-customer-form {
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

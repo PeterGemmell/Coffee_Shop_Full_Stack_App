@@ -12,24 +12,16 @@ class CoffeeDetail extends Component {
       return "Loading..."
     }
     return (
-      <div className= "coffee-details">
+      <div className= "coffee-component">
 
-       <div className= "coffee-details-img-container">
-        <img className= "coffee-details-img" src={this.props.coffee.imgLink} alt="image"/>
-        </div>
-
-        <div className= "coffee-box-details">
-         <div className="coffee-box-details-text">
+        <img src={this.props.coffee.imgLink} alt="image"/>
           <h1> {this.props.coffee.brandName} </h1>
           <h1> {this.props.coffee.productName} </h1>
           <h1> {this.props.coffee.origin} </h1>
           <h2> {this.props.coffee.typeOfBeans} </h2>
-          <h3> {this.props.coffee.productInfo} </h3>
+          <h2> {this.props.coffee.productInfo} </h2>
           <h2> £{this.props.coffee.retailPrice} </h2>
-      </div>
-
       <button>Add To Basket</button>
-      </div>
       </div>
     )
   }
