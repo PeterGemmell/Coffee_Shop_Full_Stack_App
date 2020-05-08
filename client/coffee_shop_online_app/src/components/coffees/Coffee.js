@@ -1,30 +1,60 @@
-import React, {Fragment} from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 
-const Coffee = (props) => {
-  if(!props.coffee){
-    return "Loading..."
+
+class Coffee extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      qty: 0
+    };
+
+    this.add = this.add.bind(this);
+    this.subtract = this.subtract.bind(this);
   }
 
-  const url="/coffees" + props.coffee.id;
+  add(){
+    this.setState({
+      qty: this.state.qty + 1
+    });
+    // this.props.handleTotal(this.props.coffee.retailPrice);
+  }
 
+  subtract(){
+    this.setState({
+      qty: this.state.qty - 1
+    });
+    // this.props.handleTotal(-this.props.coffee.retailPrice);
+  }
+
+ // Rendering the list of Coffee along with the plus and minus quantity button.
+  render(){
   return (
-    <Fragment>
     <div className="coffee-component">
-    <img src={props.coffee.imgLink} width="280" />
+    <img src={this.props.coffee.imgLink} width="350" />
     <div>
-    <p><b><u>{props.coffee.brandName}</u></b></p><br></br>
-    <p><i>Name</i>  {props.coffee.productName}</p>
-    <p><i>Origin</i>  {props.coffee.origin}</p>
-    <p><i>Beans</i>  {props.coffee.typeOfBeans}</p>
-    <p>{props.coffee.productInfo}</p>
-    <p>£{props.coffee.retailPrice}</p>
-    <button>Add To Basket</button>
+    <p><b><u>{this.props.coffee.brandName}</u></b></p><br></br>
+    <p><i>Name</i>  {this.props.coffee.productName}</p>
+    <p><i>Origin</i>  {this.props.coffee.origin}</p>
+    <p><i>Beans</i>  {this.props.coffee.typeOfBeans}</p>
+    <p>{this.props.coffee.productInfo}</p>
+    <p>Qty {this.state.qty}</p>
+    <p>£{this.props.coffee.retailPrice}</p>
+    <button className="btn btn-outline-primary" onClick={this.add}>
+    +1
+    </button>
+    <button className="btn btn-outline-primary" onClick={this.subtract} disabled={this.state.qty <1}>
+    -1
+    </button>
     </div>
     </div>
-    </Fragment>
+
   )
+ }
+
+
 }
+
 
 export default Coffee;
