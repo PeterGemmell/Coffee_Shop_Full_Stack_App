@@ -34,8 +34,14 @@ public class Coffee {
     @Column(name= "product_info")
     private String productInfo;
 
+    @Column(name= "quantity_in_cart")
+    private Integer quantityInCart;
 
-    public Coffee(String brandName, String productName, String origin, String typeOfBeans, String imgLink, Double costPrice, Double retailPrice, String productInfo){
+    @Column(name= "in_cart")
+    private Boolean inCart;
+
+
+    public Coffee(String brandName, String productName, String origin, String typeOfBeans, String imgLink, Double costPrice, Double retailPrice, String productInfo, Integer quantityInCart, Boolean inCart){
         this.brandName = brandName;
         this.productName = productName;
         this.origin = origin;
@@ -44,12 +50,29 @@ public class Coffee {
         this.costPrice = costPrice;
         this.retailPrice = retailPrice;
         this.productInfo = productInfo;
+        this.quantityInCart = quantityInCart;
+        this.inCart = inCart;
     }
 
     public Coffee(){
 
     }
 
+    public Integer getQuantityInCart() {
+        return quantityInCart;
+    }
+
+    public void setQuantityInCart(Integer quantityInCart) {
+        this.quantityInCart = quantityInCart;
+    }
+
+    public Boolean getInCart() {
+        return inCart;
+    }
+
+    public void setInCart(Boolean inCart) {
+        this.inCart = inCart;
+    }
 
     public String getProductName() {
         return productName;

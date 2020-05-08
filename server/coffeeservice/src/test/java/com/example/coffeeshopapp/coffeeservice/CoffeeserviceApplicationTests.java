@@ -35,7 +35,7 @@ class CoffeeserviceApplicationTests {
 
 	@Test
 	public void canSaveCoffeeToStock(){
-		Coffee coffee1 = new Coffee("Lavazza", "Crema e Gusto", "South America", "Robusta","https://pepperyspot.com/wp-content/uploads/2017/12/lavazza-crema-e-gusto.jpg", 3.00, 6.50, "Creamy and full bodied. Intense and well balanced aroma, full bodied, and fragrant flavour, rich aftertaste with chocolaty notes.");
+		Coffee coffee1 = new Coffee("Lavazza", "Crema e Gusto", "South America", "Robusta","https://pepperyspot.com/wp-content/uploads/2017/12/lavazza-crema-e-gusto.jpg", 3.00, 6.50, "Creamy and full bodied. Intense and well balanced aroma, full bodied, and fragrant flavour, rich aftertaste with chocolaty notes.", 0, false);
 		coffeeRepository.save(coffee1);
 	}
 
