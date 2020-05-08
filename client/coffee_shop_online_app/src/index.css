@@ -1,8 +1,27 @@
 
+.new-customer-form{
+  list-style-type: none;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+
+.welcome-message{
+  list-style: none;
+  text-align: center;
+}
+
+.welcome-message-header{
+  list-style-type: none;
+  text-align: center;
+}
+
 .h1-header {
 justify-content: center;
 color: #34495e;
-padding-left: 540px;
+padding-left: 590px;
+padding-right: 200px;
 margin: 0;
 height: 100%;
 width: 25%;
@@ -10,6 +29,8 @@ font-style: italic;
 text-align: center;
 line-height: 80px;
 align-items: center;
+list-style-type: none;
+flex-direction: row;
 
 
 }
@@ -22,24 +43,24 @@ align-items: center;
   margin: 0;
   border: 0;
 
-
-
-
 }
 
 .navLink {
+  display:inline;
+  /* align-items: stretch; */
   flex-direction: row;
-  list-style-type: none;
+  justify-content: center;
+  color: #34495e;
+  padding-left: 200px;
+  padding-right: 120px;
+  margin: 0;
+  height: 100%;
+  width: 25%;
+  /* font-style: italic; */
   text-align: center;
-
-  /* justify-content: space-between;
-    flex-direction: row;
-    display:inline-flex;
-    justify-content:center;
-    justify-content: space-around; */
-
-
-
+  line-height: 80px;
+  align-items: center;
+  list-style-type: none;
 
 
 

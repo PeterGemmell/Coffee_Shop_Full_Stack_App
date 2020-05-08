@@ -35,10 +35,13 @@ class LoginForm extends Component {
     return(
       <div className="new-customer-form">
       <br></br><br></br><br></br><br></br>
+      <li className="welcome-message">
       <p> Welcome to Coffee Ahoy, create an account below and start shopping your favourite coffees!</p><br></br><br></br>
+      </li>
+      <li className="welcome-message-header">
       <h1> Create an account </h1>
-      <hr></hr>
-      <form onSubmit={this.handleSubmit}>
+      </li>
+      <form className="new-customer-form" onSubmit={this.handleSubmit}>
       <label>Enter first name:</label>
       <input type="text" placeholder= "First Name" name="firstName" onChange={this.handleChange} value={this.state.customer.firstName} /><br/>
       <label>Enter last name:</label>

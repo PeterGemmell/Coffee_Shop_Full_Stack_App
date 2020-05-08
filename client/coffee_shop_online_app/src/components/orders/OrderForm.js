@@ -5,11 +5,8 @@ import Request from '../../helpers/request'
 class OrderForm extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = {
-      total: 0
-    }
   }
+
   render(){
     let total = this.props.total.toFixed(2);
     let tax = (this.props.total * 0.15).toFixed(2);
@@ -17,8 +14,12 @@ class OrderForm extends React.Component {
     let mystyle = {
       borderTop: "1px solid #ddd",
       marginTop: "10px"
-    };
+    }
+
+
+
     return(
+<form>
       <div style={{"marginTop": "30px", "backgroundColor": "#F6F6F6", "padding": "10px"}}>
       <h3 className="row" style={{ fontWeight: 400 }}>
       <span className="col-6">total price:</span>
@@ -33,6 +34,8 @@ class OrderForm extends React.Component {
       <span className="col-6 text-right">£{totalIncTax}</span>
       </h3>
       </div>
+      </form>
+
     );
   }
 }

@@ -12,8 +12,8 @@ const ShopContainer = () => {
     <Fragment>
     <NavBar/>
     <Switch>
-    <Route path="/coffees" component={CoffeeContainer} />
     <Route path="/login" component={LoginContainer} />
+    <Route path="/coffees" component={CoffeeContainer} />
     <Route path="/orders" component={OrderContainer} />
     </Switch>
     </Fragment>
