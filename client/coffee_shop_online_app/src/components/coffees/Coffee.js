@@ -28,7 +28,7 @@ class Coffee extends Component {
     // this.props.handleTotal(-this.props.coffee.retailPrice);
   }
 
- // Rendering the list of Coffee along with the plus and minus quantity button.
+ // Rendering the list of Coffee along with the plus and minus quantity button. Quantity also increases and decreases.
   render(){
   return (
     <div className="coffee-component">

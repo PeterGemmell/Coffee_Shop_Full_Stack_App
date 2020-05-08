@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from '../NavBar.js';
 import CoffeeContainer from './CoffeeContainer';
 import LoginContainer from './LoginContainer';
+import OrderContainer from './OrderContainer';
 
 
 const ShopContainer = () => {
@@ -13,6 +14,7 @@ const ShopContainer = () => {
     <Switch>
     <Route path="/coffees" component={CoffeeContainer} />
     <Route path="/login" component={LoginContainer} />
+    <Route path="/orders" component={OrderContainer} />
     </Switch>
     </Fragment>
     </Router>
