@@ -15,7 +15,7 @@ class OrderContainer extends Component{
     const request = new Request();
     request.get('/api/orders')
     .then((data) => {
-      this.setState({user: data})
+      this.setState({orders: data})
     })
   }
 
