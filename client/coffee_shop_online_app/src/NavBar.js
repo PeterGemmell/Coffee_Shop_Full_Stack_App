@@ -15,6 +15,9 @@ const NavBar = (props) => {
     <li className="navLink">
     <a href="/login">Logout</a>
     </li>
+    <li className="navLink">
+    <a href="/orders">Order's</a>
+    </li>
     </header>
     </div>
 
