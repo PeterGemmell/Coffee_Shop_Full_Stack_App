@@ -1,32 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Coffee from './Coffee.js';
 
-const CoffeeList = (props) => {
 
-  if(props.coffees.length === 0){
-    return (<p>Loading...</p>)
+class CoffeeList extends Component {
+  render() {
+   let coffees = this.props.coffees.map((coffee, index) => {
+     return <Coffee key={coffee.id}
+             coffee={coffee}
+             addToCart={this.props.addToCart} />
+   });
+   return (
+     <section id="list">
+        {coffees}
+     </section>
+   )
   }
-
-  const coffees = props.coffees.map((coffee, index) => {
-    return (
-      <li key={index} className="component-item">
-      <div className="component">
-      <br></br>
-      <Coffee coffee={coffee} />
-      </div>
-      </li>
-    )
-  })
-
-
-  return (
-    <ul className="component-list">
-    {coffees}
-    </ul>
-
-
-
-  )
 }
+
 
 export default CoffeeList;

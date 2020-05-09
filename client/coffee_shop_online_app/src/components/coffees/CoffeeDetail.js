@@ -12,10 +12,10 @@ class CoffeeDetail extends Component {
       return "Loading..."
     }
     return (
-      <div className= "coffee-component">
+      <div className= "items">
 
         <img src={this.props.coffee.imgLink} alt="image"/>
-        <br></br>
+
           <h1> {this.props.coffee.brandName} </h1>
           <h1> {this.props.coffee.productName} </h1>
           <h1> {this.props.coffee.origin} </h1>
