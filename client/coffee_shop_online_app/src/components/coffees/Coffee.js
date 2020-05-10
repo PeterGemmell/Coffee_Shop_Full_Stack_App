@@ -14,6 +14,7 @@ class Coffee extends Component {
 
   render(){
     return (
+
       <div className="items">
       <img src={this.props.coffee.imgLink} width="350"></img>
       <div className="info">

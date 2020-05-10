@@ -5,9 +5,10 @@ import Request from '../helpers/request'
 import CoffeeDetail from '../components/coffees/CoffeeDetail'
 import Header from '../components/coffees/Header'
 import ShoppingCartOverlay from '../components/coffees/ShoppingCartOverlay'
-import ShoppingCartProduct from '../components/coffees/ShoppingCartProduct'
-import ShoppingCartTotal from '../components/coffees/ShoppingCartTotal'
-
+// import ShoppingCartProduct from '../components/coffees/ShoppingCartProduct'
+// import ShoppingCartTotal from '../components/coffees/ShoppingCartTotal'
+// import ShoppingCart from '../components/coffees/ShoppingCart'
+// import ShopContainer from './ShopContainer';
 
 class CoffeeContainer extends Component {
 

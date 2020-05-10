@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
-import RightSidebar from './containers/RightSidebar';
-import ShopContainer from './containers/ShopContainer'
+import ShopContainer from './containers/ShopContainer';
+import CoffeeContainer from './containers/CoffeeContainer';
+import ShoppingCart from './components/coffees/ShoppingCart';
+import ShoppingCartOverlay from './components/coffees/ShoppingCartOverlay';
+import Dropdown from 'react-overlays/Dropdown';
 
 
 class App extends Component {
@@ -12,7 +15,7 @@ class App extends Component {
 
       <div>
       <ShopContainer />
-      </div>  
+      </div>
     );
   }
 }

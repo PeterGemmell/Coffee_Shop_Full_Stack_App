@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Coffee from './Coffee.js';
 import ShoppingCartProduct from './ShoppingCartProduct.js';
+import Dropdown from 'react-overlays/Dropdown';
+
 
 
 class ShoppingCartOverlay extends Component {
@@ -15,6 +17,7 @@ class ShoppingCartOverlay extends Component {
   updateAmountToPay(coffee){
     this.forceUpdate();
   }
+
   render(){
     let itemsInCart = this.props.data.itemsInCart.map((coffee, index) =>{
       return <ShoppingCartProduct key={index}
