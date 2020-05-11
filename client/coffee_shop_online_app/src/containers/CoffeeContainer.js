@@ -10,7 +10,9 @@ import ShoppingCartOverlay from '../components/coffees/ShoppingCartOverlay'
 // import ShoppingCart from '../components/coffees/ShoppingCart'
 // import ShopContainer from './ShopContainer';
 
+
 class CoffeeContainer extends Component {
+
 
   constructor(props){
     super(props);

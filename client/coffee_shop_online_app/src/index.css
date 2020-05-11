@@ -28,7 +28,7 @@ header #cart i {
   cursor: pointer;
 }
 header #cart i:hover {
-  color: rgb(180,220,220);
+  color: red;
 }
 #list {
   margin: 2em 2em 2em 2em;
@@ -175,6 +175,12 @@ td {
 }
 
 .welcome-message{
+  list-style: none;
+  text-align: center;
+}
+
+.about-us-message {
+  padding-top: 200px;
   list-style: none;
   text-align: center;
 }

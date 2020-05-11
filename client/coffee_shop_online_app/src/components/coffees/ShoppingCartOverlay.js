@@ -25,6 +25,7 @@ class ShoppingCartOverlay extends Component {
               indexInCart={index}
               removeFromCart={this.props.removeFromCart}
               updateAmountToPay={this.updateAmountToPay} />
+      let itemsInCart = [];
     });
     let amountToPay = 0;
     for (let i=0; i<this.props.data.coffees.length; i++) {

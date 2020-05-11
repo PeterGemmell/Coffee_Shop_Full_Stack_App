@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Coffee from './Coffee.js';
+import Dropdown from 'react-overlays/Dropdown';
 
-
-class ShoppingCart extends Component {
+class ShoppingCart extends React.Component {
   constructor(props){
     super(props);
     this.showOverlay = this.showOverlay.bind(this);
@@ -15,6 +15,7 @@ class ShoppingCart extends Component {
 
   render(){
     return (
+
       <div id= 'cart'>
       {/* Hide a number of items if its equal 0 */}
       <span className={this.props.quantity == 0 ? "hide-price" : ""}>{this.props.quantity}</span>

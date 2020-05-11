@@ -4,6 +4,7 @@ import NavBar from '../NavBar.js';
 import CoffeeContainer from './CoffeeContainer';
 import LoginContainer from './LoginContainer';
 import OrderContainer from './OrderContainer';
+import AboutContainer from './AboutContainer';
 
 
 const ShopContainer = () => {
@@ -15,6 +16,7 @@ const ShopContainer = () => {
     <Route path="/login" component={LoginContainer} />
     <Route path="/coffees" component={CoffeeContainer} />
     <Route path="/orders" component={OrderContainer} />
+    <Route path="/about" component={AboutContainer} />
     </Switch>
     </Fragment>
     </Router>
