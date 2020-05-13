@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ShopContainer from './containers/ShopContainer';
 import CoffeeContainer from './containers/CoffeeContainer';
 import ShoppingCart from './components/coffees/ShoppingCart';
@@ -12,9 +12,9 @@ class App extends Component {
   render(){
     return(
 
-      <div>
-      <ShopContainer />
-      </div>
+    <div>
+    <ShopContainer />
+    </div>
     );
   }
 }

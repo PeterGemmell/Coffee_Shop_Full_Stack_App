@@ -19,8 +19,8 @@ class ShoppingCart extends React.Component {
       <div id= 'cart'>
       {/* Hide a number of items if its equal 0 */}
       <span className={this.props.quantity == 0 ? "hide-price" : ""}>{this.props.quantity}</span>
-      <i className="fas fa-shopping-cart"
-      onClick={this.showOverlay}></i>
+      <img src="./shopcart.png" className="shopping-cart-image"
+      onClick={this.showOverlay}/>
       </div>
     )
   }

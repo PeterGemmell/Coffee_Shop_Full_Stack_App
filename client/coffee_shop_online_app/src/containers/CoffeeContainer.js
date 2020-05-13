@@ -7,7 +7,7 @@ import Header from '../components/coffees/Header'
 import ShoppingCartOverlay from '../components/coffees/ShoppingCartOverlay'
 // import ShoppingCartProduct from '../components/coffees/ShoppingCartProduct'
 // import ShoppingCartTotal from '../components/coffees/ShoppingCartTotal'
-// import ShoppingCart from '../components/coffees/ShoppingCart'
+import ShoppingCart from '../components/coffees/ShoppingCart'
 // import ShopContainer from './ShopContainer';
 class CoffeeContainer extends Component {
   constructor(props) {
@@ -77,11 +77,14 @@ class CoffeeContainer extends Component {
               return (
                 <>
 // !!!!!!!!! WHAT WE RENDER WILL BE DIFFERENT BUT SOMETHING WILL GO IN HERE
-                  <Header quantity={this.state.quantity}
+                <main>
+                <ShoppingCart quantity={this.state.quantity}
                     amountToPay={this.state.amountToPay} />
                   <ShoppingCartOverlay data={this.state}
                     removeFromCart={this.removeFromCart} />
-                  <CoffeeList coffees={this.state.coffees} />
+                  <CoffeeList coffees={this.state.coffees}
+                    addToCart={this.addToCart} />
+                </main>
 // !!!!!!!!! END OF BIT THAT WILL BE DIFFERENT
                 </>
               )

@@ -36,8 +36,8 @@ class ShoppingCartOverlay extends Component {
       <section id="shopping-cart">
       <div id="cart-header">
       <span id="cart-title">Shopping Cart</span>
-      <i className="far fa-times-circle"
-      onClick={this.closeOverlay.bind(this)}></i>
+      <button className="far fa-times-circle"
+      onClick={this.closeOverlay.bind(this)}>x</button>
       </div>
       <table>
       <thead>
