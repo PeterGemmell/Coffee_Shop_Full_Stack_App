@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Sidebar from "react-sidebar";
 import ShopContainer from './containers/ShopContainer';
 import CoffeeContainer from './containers/CoffeeContainer';
 import ShoppingCart from './components/coffees/ShoppingCart';

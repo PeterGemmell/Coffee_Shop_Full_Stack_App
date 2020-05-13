@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import CoffeeList from '../components/coffees/CoffeeList'
 import Request from '../helpers/request'
 import CoffeeDetail from '../components/coffees/CoffeeDetail'
@@ -9,12 +9,8 @@ import ShoppingCartOverlay from '../components/coffees/ShoppingCartOverlay'
 // import ShoppingCartTotal from '../components/coffees/ShoppingCartTotal'
 // import ShoppingCart from '../components/coffees/ShoppingCart'
 // import ShopContainer from './ShopContainer';
-
-
 class CoffeeContainer extends Component {
-
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       coffees: [],
@@ -26,8 +22,7 @@ class CoffeeContainer extends Component {
     this.removeFromCart = this.removeFromCart.bind(this);
     this.findCoffeeById = this.findCoffeeById.bind(this);
   }
-
-  addToCart(coffee){
+  addToCart(coffee) {
     let itemsInCart = this.state.itemsInCart;
     itemsInCart.push(this.props.coffees[coffee.id]);
     [][coffee.id].inCart = true;
@@ -37,70 +32,64 @@ class CoffeeContainer extends Component {
       amountToPay: this.state.amountToPay - this.props.coffees[coffee.id].retailPrice,
       itemsInCart: itemsInCart,
       coffees: []
-
     });
   }
-
-  removeFromCart(coffee, indexInCart){
+  removeFromCart(coffee, indexInCart) {
     let itemsInCart = this.state.itemsInCart;
     [][coffee.id].inCart = false;
     [][coffee.id].quantityInCart = 0;
     itemsInCart.splice(indexInCart, 1);
     this.setState({
-      quantity: this.state.quantity -1,
+      quantity: this.state.quantity - 1,
       amountToPay: this.state.amountToPay - this.props.coffees[coffee.id].retailPrice,
       itemsInCart: itemsInCart,
       coffees: []
     });
   }
-
-  componentDidMount(){
+  componentDidMount() {
     const request = new Request();
-
     request.get('/api/coffees')
-    .then((data) => {
-    this.setState({coffees: data})
-    })
+      .then((data) => {
+        this.setState({ coffees: data })
+      })
   }
-
-  handlePost(coffee){
+  handlePost(coffee) {
     const request = new Request();
     request.post('/api/coffees', coffee)
-    .then( () => {
-      window.location = '/coffees'
-    })
+      .then(() => {
+        window.location = '/coffees'
+      })
   }
-
-  findCoffeeById(id){
+  findCoffeeById(id) {
     return this.state.coffees.find((coffee) => {
       return coffee.id === parseInt(id);
     });
   }
-
-  render(){
-
-    if(!this.state.coffees){
+  render() {
+    if (!this.state.coffees) {
       return null
     }
-
-    return(
+    return (
       <Router>
-      <Fragment>
-      <Switch>
-      <Route render={(props) => {
-        return <CoffeeList coffees={this.state.coffees} />
-      }} />
-      <Header quantity={this.state.quantity}
-      amountToPay={this.state.amountToPay} />
-      <ShoppingCartOverlay data={this.state}
-      removeFromCart={this.removeFromCart} />
-      <CoffeeList coffees={this.props.coffees}
-      addToCart={this.addToCart} />
-      </Switch>
-      </Fragment>
+        <Fragment>
+          <Switch>
+            <Route render={(props) => {
+              return (
+                <>
+// !!!!!!!!! WHAT WE RENDER WILL BE DIFFERENT BUT SOMETHING WILL GO IN HERE
+                  <Header quantity={this.state.quantity}
+                    amountToPay={this.state.amountToPay} />
+                  <ShoppingCartOverlay data={this.state}
+                    removeFromCart={this.removeFromCart} />
+                  <CoffeeList coffees={this.state.coffees} />
+// !!!!!!!!! END OF BIT THAT WILL BE DIFFERENT
+                </>
+              )
+            }} />
+          </Switch>
+        </Fragment>
       </Router>
     )
   }
 }
-
 export default CoffeeContainer;

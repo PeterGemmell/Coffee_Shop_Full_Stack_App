@@ -8,9 +8,8 @@ class Header extends Component {
   render(){
     return(
       <header className="new-header">
-      <NavBar />
-      <ShoppingCart quantity={this.props.quantity}
-      amountToPay={this.props.amountToPay} />
+      <ShoppingCart quantity={this.props.quantity.coffee}
+      amountToPay={this.props.amountToPay.coffee} />
       </header>
     )
   }
