@@ -5,10 +5,11 @@ import Request from '../helpers/request'
 import CoffeeDetail from '../components/coffees/CoffeeDetail'
 import Header from '../components/coffees/Header'
 import ShoppingCartOverlay from '../components/coffees/ShoppingCartOverlay'
-// import ShoppingCartProduct from '../components/coffees/ShoppingCartProduct'
-// import ShoppingCartTotal from '../components/coffees/ShoppingCartTotal'
+import ShoppingCartProduct from '../components/coffees/ShoppingCartProduct'
 import ShoppingCart from '../components/coffees/ShoppingCart'
-// import ShopContainer from './ShopContainer';
+import Coffee from '../components/coffees/Coffee'
+
+
 class CoffeeContainer extends Component {
   constructor(props) {
     super(props);
@@ -23,27 +24,28 @@ class CoffeeContainer extends Component {
     this.findCoffeeById = this.findCoffeeById.bind(this);
   }
   addToCart(coffee) {
-    let itemsInCart = this.state.itemsInCart;
-    itemsInCart.push(this.props.coffees[coffee.id]);
-    [][coffee.id].inCart = true;
-    [][coffee.id].quantityInCart = 1;
+    let tempCart = this.state.itemsInCart;
+    tempCart.push(this.state.coffees[coffee.id -1]);
+    this.state.coffees[coffee.id].inCart = true;
+    this.state.coffees[coffee.id].quantityInCart = 1;
     this.setState({
       quantity: this.state.quantity + 1,
-      amountToPay: this.state.amountToPay - this.props.coffees[coffee.id].retailPrice,
-      itemsInCart: itemsInCart,
-      coffees: []
+      amountToPay: this.state.amountToPay - this.state.coffees[coffee.id].retailPrice,
+      itemsInCart: tempCart
     });
+    
   }
+
+
   removeFromCart(coffee, indexInCart) {
-    let itemsInCart = this.state.itemsInCart;
-    [][coffee.id].inCart = false;
-    [][coffee.id].quantityInCart = 0;
-    itemsInCart.splice(indexInCart, 1);
+    let tempCartRemove = this.state.itemsInCart;
+    this.state.coffees[coffee.id].inCart = false;
+    this.state.coffees[coffee.id].quantityInCart = 0;
+    tempCartRemove.splice(indexInCart, 1);
     this.setState({
       quantity: this.state.quantity - 1,
-      amountToPay: this.state.amountToPay - this.props.coffees[coffee.id].retailPrice,
-      itemsInCart: itemsInCart,
-      coffees: []
+      amountToPay: this.state.amountToPay - this.state.coffees[coffee.id].retailPrice,
+      itemsInCart: tempCartRemove
     });
   }
   componentDidMount() {
@@ -69,6 +71,8 @@ class CoffeeContainer extends Component {
     if (!this.state.coffees) {
       return null
     }
+
+
     return (
       <Router>
         <Fragment>
@@ -76,15 +80,15 @@ class CoffeeContainer extends Component {
             <Route render={(props) => {
               return (
                 <>
-// !!!!!!!!! WHAT WE RENDER WILL BE DIFFERENT BUT SOMETHING WILL GO IN HERE
-                <main>
-                <ShoppingCart quantity={this.state.quantity}
+                <div>
+                <Header quantity={this.state.quantity}  /// Was ShoppingCart
                     amountToPay={this.state.amountToPay} />
                   <ShoppingCartOverlay data={this.state}
                     removeFromCart={this.removeFromCart} />
-                  <CoffeeList coffees={this.state.coffees}
-                    addToCart={this.addToCart} />
-                </main>
+                    <CoffeeList coffees={this.state.coffees} // ///// not here as changing to .props broke it. Had inCart below too.                //// this is rendering the full coffee list.
+                      itemsInCart={this.state.itemsInCart}
+                      addToCart={this.addToCart} />
+                </div>
 // !!!!!!!!! END OF BIT THAT WILL BE DIFFERENT
                 </>
               )

@@ -29,8 +29,7 @@ class ShoppingCartProduct extends Component {
       <input type="number" name="quantity" min="1" max="10" onChange={this.handleQuantityChange} />
       </td>
       <td>£{this.props.coffee.retailPrice * this.props.coffee.quantityInCart}</td>
-      <td><i className="fas fa-trash"
-          onClick={this.handleRemoveFromCart}></i></td>
+      <td><p className="bin" onClick={this.handleRemoveFromCart}><i></i>HI</p></td>
       </tr>
     )
   }

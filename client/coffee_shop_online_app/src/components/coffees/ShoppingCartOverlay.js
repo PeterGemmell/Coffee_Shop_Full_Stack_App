@@ -25,7 +25,7 @@ class ShoppingCartOverlay extends Component {
               indexInCart={index}
               removeFromCart={this.props.removeFromCart}
               updateAmountToPay={this.updateAmountToPay} />
-      let itemsInCart = [];
+      // let itemsInCart = [];
     });
     let amountToPay = 0;
     for (let i=0; i<this.props.data.coffees.length; i++) {
@@ -62,7 +62,7 @@ class ShoppingCartOverlay extends Component {
       <span>Total: £{amountToPay}</span>
       </div>
       <button id="checkout"
-      disabled={itemsInCart.length == 0 ? true: false} >Checkout</button>
+      disabled={itemsInCart.length == 0 ? true : false} >Checkout</button>
       </section>
       </div>
 
