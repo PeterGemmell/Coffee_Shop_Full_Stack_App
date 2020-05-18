@@ -1,4 +1,5 @@
 
+
 /* header {
   width: 100%;
   height: 4em;
@@ -52,8 +53,8 @@ header #cart i:hover {
 }
 
 .bin-image {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   cursor: pointer;
 }
 
@@ -99,7 +100,14 @@ header #cart i:hover {
 }
 .hide-price {
   display: none;
+
 }
+
+.show-price {
+  color: black;
+  font-weight: bold;
+}
+
 #overlay {
   position: fixed;
   display: none;
@@ -183,6 +191,7 @@ table {
 
 .items-in-cart {
   text-align: center;
+
 }
 
 td {

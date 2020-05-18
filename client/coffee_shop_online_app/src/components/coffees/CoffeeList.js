@@ -5,7 +5,7 @@ import Coffee from './Coffee.js';
 class CoffeeList extends Component {
   render() {
    let coffees = this.props.coffees.map((coffee, index) => { //changed props to state and also back in coffee container.
-     return <Coffee key={coffee.id}
+     return  <Coffee key={coffee.id}
              coffee={coffee}
              addToCart={this.props.addToCart} />
 

@@ -9,7 +9,7 @@ class Coffee extends Component {
     this.handleAddToCart = this.handleAddToCart.bind(this);
 
   }
-  handleAddToCart(e){
+  handleAddToCart(coffee){
     this.props.addToCart(this.props.coffee);
   }
 

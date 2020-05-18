@@ -33,7 +33,7 @@ class CoffeeContainer extends Component {
       amountToPay: this.state.amountToPay - this.state.coffees[coffee.id].retailPrice,
       itemsInCart: tempCart
     });
-    
+
   }
 
 
@@ -81,15 +81,14 @@ class CoffeeContainer extends Component {
               return (
                 <>
                 <div>
-                <Header quantity={this.state.quantity}  /// Was ShoppingCart
+                <Header quantity={this.state.quantity}
                     amountToPay={this.state.amountToPay} />
                   <ShoppingCartOverlay data={this.state}
                     removeFromCart={this.removeFromCart} />
-                    <CoffeeList coffees={this.state.coffees} // ///// not here as changing to .props broke it. Had inCart below too.                //// this is rendering the full coffee list.
+                    <CoffeeList coffees={this.state.coffees}
                       itemsInCart={this.state.itemsInCart}
                       addToCart={this.addToCart} />
                 </div>
-// !!!!!!!!! END OF BIT THAT WILL BE DIFFERENT
                 </>
               )
             }} />
