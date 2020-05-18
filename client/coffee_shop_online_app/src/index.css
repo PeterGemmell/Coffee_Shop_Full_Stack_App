@@ -51,6 +51,12 @@ header #cart i:hover {
 
 }
 
+.bin-image {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .new-header {
   margin-right: 2em;
   text-decoration: none;

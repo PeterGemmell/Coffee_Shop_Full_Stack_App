@@ -29,7 +29,7 @@ class ShoppingCartProduct extends Component {
       <input type="number" name="quantity" min="1" max="10" onChange={this.handleQuantityChange} />
       </td>
       <td>£{this.props.coffee.retailPrice * this.props.coffee.quantityInCart}</td>
-      <td><p className="bin" onClick={this.handleRemoveFromCart}><i></i>HI</p></td>
+      <td><p> <img src="./bin.png" className="bin-image" onClick={this.handleRemoveFromCart}/></p></td>
       </tr>
     )
   }
