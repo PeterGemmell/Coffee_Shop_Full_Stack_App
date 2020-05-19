@@ -8,3 +8,6 @@ The app is built using:
 *JavaScript React (front-end)
 *Java Spring and H2 data base (back-end)
 *Additional libraries used: react-overlay
+
+
+![Alt text](./coffee1.png)
