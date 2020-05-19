@@ -25,8 +25,8 @@ class CoffeeContainer extends Component {
   }
   addToCart(coffee) {
     let tempCart = this.state.itemsInCart;
-    tempCart.push(this.state.coffees[coffee.id -1]);
-    this.state.coffees[coffee.id].inCart = true;
+    tempCart.push(this.state.coffees[coffee.id -=1]); // can set -1.
+    this.state.coffees[coffee.id].inCart = true; // can comment out to remove red button disable.
     this.state.coffees[coffee.id].quantityInCart = 1;
     this.setState({
       quantity: this.state.quantity + 1,
@@ -39,6 +39,7 @@ class CoffeeContainer extends Component {
 
   removeFromCart(coffee, indexInCart) {
     let tempCartRemove = this.state.itemsInCart;
+    // tempCartRemove.pop(this.state.coffees[coffee.id]);
     this.state.coffees[coffee.id].inCart = false;
     this.state.coffees[coffee.id].quantityInCart = 0;
     tempCartRemove.splice(indexInCart, 1);
